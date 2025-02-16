@@ -21,7 +21,7 @@ function DoctorDashboard() {
     //         navigate('/doclogin');
     //     } else {
     //         const fetchdoctor = async () => {
-    //             const res = await axios.get("http://localhost:8080/appointment/get");
+    //             const res = await axios.get("https://doc-appointment-node-backend.onrender.com/appointment/get");
     //             const vdocdata = res.data.vdata;
     //             setvdoc(vdocdata);
     //             console.log(vdocdata);

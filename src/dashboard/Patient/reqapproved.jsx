@@ -10,7 +10,7 @@ function Reqapproved() {
         const token = localStorage.getItem('patienttoken');
         const myDecodedToken = jwtDecode(token);
         var obj = { email: myDecodedToken.oldUser.email }
-        const res = await axios.post("http://localhost:8080/findapprovedappointmentofpatient", myDecodedToken.oldUser);
+        const res = await axios.post("https://doc-appointment-node-backend.onrender.com/findapprovedappointmentofpatient", myDecodedToken.oldUser);
         const patientappo = await res.data.patientinfo
         setpatient(patientappo);
 

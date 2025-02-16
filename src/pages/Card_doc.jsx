@@ -137,7 +137,7 @@ function Card_doc() {
                 slot4time = slot4time + 12;
             }
         }
-        await axios.post("http://localhost:8080/getdatetime", obj).then((res) => {
+        await axios.post("https://doc-appointment-node-backend.onrender.com/getdatetime", obj).then((res) => {
             var data = res.data.docinfo;
             if (data.slot1 == "true") {
 
@@ -209,7 +209,7 @@ function Card_doc() {
     async function bookdocappo(e) {
         setdatepicker(false);
         docemail.email = e.target.value;
-        await axios.post("http://localhost:8080/finddocemail", docemail).then((res) => {
+        await axios.post("https://doc-appointment-node-backend.onrender.com/finddocemail", docemail).then((res) => {
             var data = res.data.docinfo;
             const sdate1 = `${current.getFullYear()}-${cmonth}-${cdate}`;
             datetimechecker.email = data[0].email;
@@ -326,7 +326,7 @@ function Card_doc() {
         datetimechecker.email = slot.email;
         datetimechecker.date = e.target.value;
         datetimechecker.docname = slot.docname;
-        await axios.post("http://localhost:8080/getdatetime", datetimechecker).then((res) => {
+        await axios.post("https://doc-appointment-node-backend.onrender.com/getdatetime", datetimechecker).then((res) => {
             var data = res.data.docinfo;
             if (data.slot1 == "true") {
                 document.getElementById("hiddenatr").setAttribute("hidden", true);

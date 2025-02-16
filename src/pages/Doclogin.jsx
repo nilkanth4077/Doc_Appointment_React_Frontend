@@ -30,7 +30,7 @@ const Doclogin = () => {
       console.log("submit call");
       e.preventDefault();
 
-      await axios.post("http://localhost:8080/doclogin", docdetails).then((res) => {
+      await axios.post("https://doc-appointment-node-backend.onrender.com/doclogin", docdetails).then((res) => {
         //console.log(res);
         if (res.data.message === "ok") {
           toast.success("login Successful");

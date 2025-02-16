@@ -27,7 +27,7 @@ const Adminlogin = () => {
       console.log("submit call");
       e.preventDefault();
 
-      await axios.post("http://localhost:8080/adminlogin", admindetails).then((res) => {
+      await axios.post("https://doc-appointment-node-backend.onrender.com/adminlogin", admindetails).then((res) => {
         //console.log(res);
         if (res.data.message === "ok") {
           localStorage.setItem('admintoken', res.data.token);

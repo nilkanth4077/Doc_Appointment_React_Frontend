@@ -10,7 +10,7 @@ function Drpendding() {
     const fetchdoctor = async () => {
         const token = localStorage.getItem('doctortoken');
         const myDecodedToken = jwtDecode(token);
-        const res = await axios.post("http://localhost:8080/findpendingappointmentofdoctor", myDecodedToken.user);
+        const res = await axios.post("https://doc-appointment-node-backend.onrender.com/findpendingappointmentofdoctor", myDecodedToken.user);
         const doctorappo = await res.data.docinfo
         setdoctor(doctorappo);
 
@@ -24,7 +24,7 @@ function Drpendding() {
 
     function Changeappointmentstatus(e, docname, docemail, patientname, patientnumber, patientemail, date, slot) {
         var data = { docname: docname, docmail: docemail, patientname: patientname, patientnumber: patientnumber, patientemail: patientemail, date: date, slot: slot };
-        axios.post("http://localhost:8080/changependingappointmentstatus", data).then((res) => {
+        axios.post("https://doc-appointment-node-backend.onrender.com/changependingappointmentstatus", data).then((res) => {
             if (res.data.message === "ok") {
                 // console.log("if called");
                 toast.success("Status change successfully");

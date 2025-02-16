@@ -9,7 +9,7 @@ function Drdone() {
     const fetchdoctor = async () => {
         const token = localStorage.getItem('doctortoken');
         const myDecodedToken = jwtDecode(token);
-        const res = await axios.post("http://localhost:8080/finddoneappointmentofdoctor", myDecodedToken.user);
+        const res = await axios.post("https://doc-appointment-node-backend.onrender.com/finddoneappointmentofdoctor", myDecodedToken.user);
         const doctorappo = await res.data.docinfo
         setdoctor(doctorappo);
 

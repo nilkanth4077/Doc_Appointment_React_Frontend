@@ -10,7 +10,7 @@ function Displaydoc() {
     var [doclist, setdoc] = useState([]);
     var [vdoclist, setvdoc] = useState([]);
     const fetchdoctor = async () => {
-        const res = await axios.get("http://localhost:8080/doctor/get");
+        const res = await axios.get("https://doc-appointment-node-backend.onrender.com/doctor/get");
         const docdata = await res.data.docdata
         setdoc(docdata);
         const vdocdata = res.data.vdata;
@@ -28,17 +28,17 @@ function Displaydoc() {
         docpdf.docmail = e.target.value;
         console.log(docpdf);
         //setdocument(e);
-        axios.post("http://localhost:8080/getpdf", docpdf).then((res) => {
+        axios.post("https://doc-appointment-node-backend.onrender.com/getpdf", docpdf).then((res) => {
             if (res.data.message === "filenowread") {
-                //window.location.href = "http://localhost:8080/readpdf";
+                //window.location.href = "https://doc-appointment-node-backend.onrender.com/readpdf";
                 window.open(
-                    'http://localhost:8080/readpdf',
+                    'https://doc-appointment-node-backend.onrender.com/readpdf',
                     '_blank' // <- This is what makes it open in a new window.
                 );
             }
 
             // if (res) {
-            //     axios.get("http://localhost:8080/readpdf");
+            //     axios.get("https://doc-appointment-node-backend.onrender.com/readpdf");
             // }
         })
     }

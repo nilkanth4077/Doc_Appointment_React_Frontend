@@ -12,7 +12,7 @@ function PatientDetails() {
         const token = localStorage.getItem('patienttoken');
         const myDecodedToken = jwtDecode(token);
         data = myDecodedToken.oldUser;
-        // const res = await axios.post("http://localhost:8080/findpatient", data);
+        // const res = await axios.post("https://doc-appointment-node-backend.onrender.com/findpatient", data);
         // const patient = res.data.patientinfo;
         setpatientdata(data);
     }

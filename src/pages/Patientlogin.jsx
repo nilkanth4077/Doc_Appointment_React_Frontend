@@ -31,7 +31,7 @@ const Patientlogin = () => {
       // console.log("submit call");
       e.preventDefault();
 
-      await axios.post("http://localhost:8080/patientlogin", patientdetails).then((res) => {
+      await axios.post("https://doc-appointment-node-backend.onrender.com/patientlogin", patientdetails).then((res) => {
         //console.log(res);
         if (res.data.message === "ok") {
 

@@ -29,7 +29,7 @@ function Verifierreg() {
         else {
             console.log("submit call");
             e.preventDefault();
-            await axios.post("http://localhost:8080/verifierreg", verifierdetails).then((res) => {
+            await axios.post("https://doc-appointment-node-backend.onrender.com/verifierreg", verifierdetails).then((res) => {
                 console.log(res);
                 if (res.data.message == "ok") {
                     toast.success("registration Successful");

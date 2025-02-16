@@ -44,7 +44,7 @@ function Verifierdashboard() {
         }
 
         const fetchdoctor = async () => {
-            const res = await axios.get("http://localhost:8080/doctor/get");
+            const res = await axios.get("https://doc-appointment-node-backend.onrender.com/doctor/get");
             const docdata = res.data.docdata;
             setdoc(docdata);
             const vdocdata = res.data.vdata;

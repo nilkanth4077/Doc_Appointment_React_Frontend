@@ -48,7 +48,7 @@ function Index() {
 
         const getSpeciality = async () => {
 
-            await axios.get("http://localhost:8080/getSpeciality").then((res) => {
+            await axios.get("https://doc-appointment-node-backend.onrender.com/getSpeciality").then((res) => {
                 // console.log(res.data.specialistdata);
                 var data = res.data.specialistdata;
                 // console.log(data);
@@ -75,7 +75,7 @@ function Index() {
             toast.error("select specialist first");
         }
         else {
-            await axios.post("http://localhost:8080/finddoc", appodetails).then((res) => {
+            await axios.post("https://doc-appointment-node-backend.onrender.com/finddoc", appodetails).then((res) => {
                 if (res.data.message == "finddoc") {
                     // console.log(res.data.docinfo.length);
                     if (res.data.docinfo.length > 0) {

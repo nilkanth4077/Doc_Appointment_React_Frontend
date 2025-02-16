@@ -40,13 +40,13 @@ const Doctorreg = () => {
       filedoc.name = file.name;
       filedoc.size = file.size;
       filedoc.type = file.type;
-      axios.post("http://localhost:8080/check", docdetails).then((res) => {
+      axios.post("https://doc-appointment-node-backend.onrender.com/check", docdetails).then((res) => {
         if (res.data.message === "Exists") {
           setloder(false);
           toast.error("User already exist on this email");
         }
         if (res.data.message === "ok") {
-          axios.post("http://localhost:8080/upload", formdata, {
+          axios.post("https://doc-appointment-node-backend.onrender.com/upload", formdata, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -56,12 +56,12 @@ const Doctorreg = () => {
               toast.error("only pdf file are allowed");
             }
             if (res.data.message === "okk") {
-              await axios.post("http://localhost:8080/docreg", docdetails).then((res) => {
+              await axios.post("https://doc-appointment-node-backend.onrender.com/docreg", docdetails).then((res) => {
                 //console.log(res);
                 if (res.data.message === "ok") {
                   toast.success("registration Successful");
                   setloder(false);
-                  axios.post("http://localhost:8080/afterdocreg", docdetails).then((res) => {
+                  axios.post("https://doc-appointment-node-backend.onrender.com/afterdocreg", docdetails).then((res) => {
                     toast.success("check email");
                   })
 

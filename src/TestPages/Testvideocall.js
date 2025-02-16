@@ -261,7 +261,7 @@ export default Testvideocall
 // 	const [restate, setrestate] = useState(false);
 // 	const sendmail = async (e, id) => {
 // 		var data = { patientemail: appointmentdata.patientemail, patientname: appointmentdata.patientname, callid: id }
-// 		const res = await axios.post("http://localhost:8080/sendvideocallid", data);
+// 		const res = await axios.post("https://doc-appointment-node-backend.onrender.com/sendvideocallid", data);
 // 		// console.log(res);
 // 		if (res.data.message == "ok") {
 // 			setrestate(true);

@@ -10,7 +10,7 @@ const Table = () => {
     var [doclist, setdoc] = useState([]);
     var [vdoclist, setvdoc] = useState([]);
     const fetchdoctor = async () => {
-        const res = await axios.get("http://localhost:8080/doctor/get");
+        const res = await axios.get("https://doc-appointment-node-backend.onrender.com/doctor/get");
         const docdata = await res.data.docdata
         //console.log(docdata);
         //console.log('doctors' >> docdata.fullname);
@@ -32,17 +32,17 @@ const Table = () => {
         docpdf.docmail = e.target.value;
         console.log(docpdf);
         //setdocument(e);
-        axios.post("http://localhost:8080/getpdf", docpdf).then((res) => {
+        axios.post("https://doc-appointment-node-backend.onrender.com/getpdf", docpdf).then((res) => {
             if (res.data.message === "filenowread") {
-                //window.location.href = "http://localhost:8080/readpdf";
+                //window.location.href = "https://doc-appointment-node-backend.onrender.com/readpdf";
                 window.open(
-                    'http://localhost:8080/readpdf',
+                    'https://doc-appointment-node-backend.onrender.com/readpdf',
                     '_blank' // <- This is what makes it open in a new window.
                 );
             }
 
             // if (res) {
-            //     axios.get("http://localhost:8080/readpdf");
+            //     axios.get("https://doc-appointment-node-backend.onrender.com/readpdf");
             // }
         })
     }
@@ -53,11 +53,11 @@ const Table = () => {
         docstatus.doctormail = e.target.value;
         console.log(docstatus);
         //setdocument(e);
-        axios.post("http://localhost:8080/changestatus", docstatus).then((res) => {
+        axios.post("https://doc-appointment-node-backend.onrender.com/changestatus", docstatus).then((res) => {
             if (res.data.message === "doctor verified") {
                 // console.log("if called");
                 toast.success("doctor verified");
-                axios.post("http://localhost:8080/afterdocverified", docstatus).then((res) => {
+                axios.post("https://doc-appointment-node-backend.onrender.com/afterdocverified", docstatus).then((res) => {
 
                 });
                 window.location.reload(true);

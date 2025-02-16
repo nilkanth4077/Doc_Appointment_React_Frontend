@@ -91,7 +91,7 @@ function Appointmentbooking() {
     }
     else {
       e.preventDefault();
-      await axios.post("http://localhost:8080/addappoinfo", docandpatientappointementdetails).then((res) => {
+      await axios.post("https://doc-appointment-node-backend.onrender.com/addappoinfo", docandpatientappointementdetails).then((res) => {
         if (res.data.message === "error") {
           //console.log(res.data.docinfo);
           // navigate("/card", { state: { docinfo: res.data.docinfo } });
@@ -100,7 +100,7 @@ function Appointmentbooking() {
         else if (res.data.message === "done") {
           toast.success("Appointment request has sent to your selected doctor");
           toast.info("keep checking your profile");
-          axios.post("http://localhost:8080/afterappobook", docandpatientappointementdetails);
+          axios.post("https://doc-appointment-node-backend.onrender.com/afterappobook", docandpatientappointementdetails);
 
           modal.style.display = "block";
           start.style.filter = "blur(5px)";

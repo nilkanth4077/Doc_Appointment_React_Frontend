@@ -15,7 +15,7 @@ function Drdetails() {
         const myDecodedToken = jwtDecode(token);
         data = myDecodedToken.user;
         // setdocdata(data);
-        await axios.post("http://localhost:8080/finddocemail", myDecodedToken.user).then((res) => {
+        await axios.post("https://doc-appointment-node-backend.onrender.com/finddocemail", myDecodedToken.user).then((res) => {
             setdocdata(res.data.docinfo);
             var fetchdata = res.data.docinfo;
             setchangedetails({
@@ -56,7 +56,7 @@ function Drdetails() {
         if (changedetails.slot1time == changedetails.slot2time && changedetails.slot1time == changedetails.slot3time && changedetails.slot1time == changedetails.slot4time) {
             toast.error("All slots are must different from each other");
         }
-        await axios.post("http://localhost:8080/changes", changedetails).then((res) => {
+        await axios.post("https://doc-appointment-node-backend.onrender.com/changes", changedetails).then((res) => {
             if (res.data.message == "ok") {
                 toast.success("Updates successfully");
                 setTimeout(() => {

@@ -32,7 +32,7 @@ function Patientreg() {
         else {
             e.preventDefault();
             if (patientdetails.password === patientdetails.confirmpassword) {
-                await axios.post("http://localhost:8080/register", patientdetails).then((res) => {
+                await axios.post("https://doc-appointment-node-backend.onrender.com/register", patientdetails).then((res) => {
                     //console.log(res);
                     if (res.data.message === "ok") {
                         toast.success("Registration Successful");

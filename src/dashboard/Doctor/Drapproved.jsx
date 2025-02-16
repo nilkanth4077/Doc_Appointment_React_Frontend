@@ -51,7 +51,7 @@ function Drapproved() {
     var [doctor, setdoctor] = useState([]);
     var [state, setstate] = useState(false);
     const fetchdoctor = async () => {
-        const res = await axios.post("http://localhost:8080/findapprovedappointmentofdoctor", myDecodedToken.user);
+        const res = await axios.post("https://doc-appointment-node-backend.onrender.com/findapprovedappointmentofdoctor", myDecodedToken.user);
         const doctorappo = await res.data.docinfo
         setdoctor(doctorappo);
 
@@ -65,7 +65,7 @@ function Drapproved() {
 
     function Changeappointmentstatus(e, docname, docemail, patientname, patientnumber, patientemail, date, slot) {
         var data = { docname: docname, docmail: docemail, patientname: patientname, patientnumber: patientnumber, patientemail: patientemail, date: date, slot: slot };
-        axios.post("http://localhost:8080/changeapprovedappointmentstatus", data).then((res) => {
+        axios.post("https://doc-appointment-node-backend.onrender.com/changeapprovedappointmentstatus", data).then((res) => {
             if (res.data.message === "ok") {
                 // console.log("if called");
                 toast.success("Status change successfully");
