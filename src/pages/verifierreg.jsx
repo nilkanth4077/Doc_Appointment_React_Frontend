@@ -64,20 +64,20 @@ function Verifierreg() {
     return (
         <div>
             <div>
-                <div class="container-fluid py-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card my-4"></div>
-                            <section class="home-banner">
+                <div className="container-fluid py-4">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="card my-4"></div>
+                            <section className="home-banner">
 
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="container col-6 mt-lg-5"  >
-                                            <div class=" px-xl-5">
-                                                <div class="lead_magnet_form_wrapper">
-                                                    <div class="form_title">
-                                                        <h4 class="sub_heading">Verifier Registration :</h4>
-                                                        <h3 class="heading mb-2 pb-1">Fill details</h3>
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="container col-6 mt-lg-5"  >
+                                            <div className=" px-xl-5">
+                                                <div className="lead_magnet_form_wrapper">
+                                                    <div className="form_title">
+                                                        <h4 className="sub_heading">Verifier Registration :</h4>
+                                                        <h3 className="heading mb-2 pb-1">Fill details</h3>
                                                     </div>
                                                     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css" />
 
@@ -85,34 +85,34 @@ function Verifierreg() {
                                                         <form >
                                                             <div id="mc_embed_signup_scroll">
 
-                                                                <div class="indicates-required"><span class="asterisk"></span> </div>
-                                                                <div class="mc-field-group form-group">
-                                                                    <label for="mce-MMERGE1" class="mb-1 mt-3">Verifier Name *</label>
-                                                                    <input type="text" name="name" value={name} onChange={(e) => handleInput(e)} class="form-control" id="mce-MMERGE1" required="true" />
+                                                                <div className="indicates-required"><span className="asterisk"></span> </div>
+                                                                <div className="mc-field-group form-group">
+                                                                    <label htmlFor="mce-MMERGE1" className="mb-1 mt-3">Verifier Name *</label>
+                                                                    <input type="text" name="name" value={name} onChange={(e) => handleInput(e)} className="form-control" id="mce-MMERGE1" required="true" />
                                                                 </div>
-                                                                <div class="mc-field-group form-group">
-                                                                    <label for="mce-EMAIL" class="mb-1 mt-3">Email Address *<span
-                                                                        class="asterisk"></span></label>
-                                                                    <input type="email" name="email" value={email} onChange={(e) => handleInput(e)} class="email form-control"
+                                                                <div className="mc-field-group form-group">
+                                                                    <label htmlFor="mce-EMAIL" className="mb-1 mt-3">Email Address *<span
+                                                                        className="asterisk"></span></label>
+                                                                    <input type="email" name="email" value={email} onChange={(e) => handleInput(e)} className="email form-control"
                                                                         id="mce-EMAIL" required="true" />
                                                                 </div>
-                                                                <div class="mc-field-group form-group">
-                                                                    <label for="mce-MMERGE1" class="mb-1 mt-3">Password *</label>
-                                                                    <input type="password" name="password" value={password} onChange={(e) => handleInput(e)} class="form-control" id="mce-MMERGE1" required="true" />
+                                                                <div className="mc-field-group form-group">
+                                                                    <label htmlFor="mce-MMERGE1" className="mb-1 mt-3">Password *</label>
+                                                                    <input type="password" name="password" value={password} onChange={(e) => handleInput(e)} className="form-control" id="mce-MMERGE1" required="true" />
                                                                 </div>
 
 
-                                                                <div id="mce-responses" class="clear foot">
-                                                                    <div class="response" id="mce-error-response" style={{ display: NaN }}></div>
-                                                                    <div class="response" id="mce-success-response" style={{ display: NaN }}></div>
+                                                                <div id="mce-responses" className="clear foot">
+                                                                    <div className="response" id="mce-error-response" style={{ display: NaN }}></div>
+                                                                    <div className="response" id="mce-success-response" style={{ display: NaN }}></div>
                                                                 </div>
                                                                 <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_dd80eb08d9cc3b8010abc039f_34a0b4f4e9" tabindex="-1" value="" /></div>
-                                                                <div class="row">
-                                                                    <div class=" col-2 optionalParent">
-                                                                        <div class="clear foot pt-4 ">
+                                                                <div className="row">
+                                                                    <div className=" col-2 optionalParent">
+                                                                        <div className="clear foot pt-4 ">
                                                                             <input type="submit" onClick={submit}
                                                                                 id="mc-embedded-subscribe"
-                                                                                class="button btn btn-primary bt mt-5 get_demo_btn" />
+                                                                                className="button btn btn-primary bt mt-5 get_demo_btn" />
 
                                                                         </div>
                                                                     </div>

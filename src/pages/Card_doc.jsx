@@ -421,59 +421,59 @@ function Card_doc() {
         <div >
             {loader ? (
                 <>
-                    {/* <div class="d-flex justify-content-center">
-                        <div class="spinner-border text-primary " role="status">
-                            <span class="sr-only"></span>
+                    {/* <div className="d-flex justify-content-center">
+                        <div className="spinner-border text-primary " role="status">
+                            <span className="sr-only"></span>
                         </div>
                     </div> */}
-                    <div class="d-flex align-items-center justify-content-center vh-100">
-                        <div class="text-center">
-                            <h1 class="display-1 fw-bold">401</h1>
-                            <p class="fs-3"> <span class="text-danger">Opps!</span> You have to login first</p>
-                            <p class="lead">
+                    <div className="d-flex align-items-center justify-content-center vh-100">
+                        <div className="text-center">
+                            <h1 className="display-1 fw-bold">401</h1>
+                            <p className="fs-3"> <span className="text-danger">Opps!</span> You have to login first</p>
+                            <p className="lead">
                                 Got ot login page
                             </p>
-                            <a href="/patientlogin" class="btn btn-primary">Login</a>
+                            <a href="/patientlogin" className="btn btn-primary">Login</a>
                         </div>
                     </div>
                 </>
             ) : (<>
                 <div>
                     <Header />
-                    <div style={{ marginTop: "20px", marginBottom: "20px", }} class="container">
+                    <div style={{ marginTop: "20px", marginBottom: "20px", }} className="container">
                         <div>
-                            <div class="row">
+                            <div className="row">
 
                                 {
                                     docinformation.map(doc => (
                                         <>
 
 
-                                            <div class="col-lg-4">
-                                                <div class="card card-margin" >
+                                            <div className="col-lg-4">
+                                                <div className="card card-margin" >
 
-                                                    <div class="card-header no-border">
-                                                        <h3 class="card-title " style={{ textTransform: 'uppercase' }}>Dr.{doc.fullname}</h3>
+                                                    <div className="card-header no-border">
+                                                        <h3 className="card-title " style={{ textTransform: 'uppercase' }}>Dr.{doc.fullname}</h3>
                                                     </div>
-                                                    <div class="card-body pt-0">
-                                                        <div class="widget-49">
-                                                            <div class="widget-49-title-wrapper">
-                                                                <div class="widget-49-date-primary">
-                                                                    <span class="widget-49-date-day">Email : {doc.email}</span>
-                                                                    {/* <span class="widget-49-date-month">apr</span> */}
+                                                    <div className="card-body pt-0">
+                                                        <div className="widget-49">
+                                                            <div className="widget-49-title-wrapper">
+                                                                <div className="widget-49-date-primary">
+                                                                    <span className="widget-49-date-day">Email : {doc.email}</span>
+                                                                    {/* <span className="widget-49-date-month">apr</span> */}
                                                                 </div>
-                                                                <div class="widget-49-meeting-info">
-                                                                    <span class="widget-49-pro-title"></span>
-                                                                    <span class="widget-49-meeting-time">Speciality : {doc.specialty}</span>
+                                                                <div className="widget-49-meeting-info">
+                                                                    <span className="widget-49-pro-title"></span>
+                                                                    <span className="widget-49-meeting-time">Speciality : {doc.specialty}</span>
                                                                 </div>
                                                             </div>
-                                                            <ol class="widget-49-meeting-points">
-                                                                <li class="widget-49-meeting-item"><span>{doc.specialty}</span></li>
-                                                                <li class="widget-49-meeting-item"><span>Data migration is in scope</span></li>
-                                                                <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span></li>
+                                                            <ol className="widget-49-meeting-points">
+                                                                <li className="widget-49-meeting-item"><span>{doc.specialty}</span></li>
+                                                                <li className="widget-49-meeting-item"><span>Data migration is in scope</span></li>
+                                                                <li className="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span></li>
                                                             </ol>
-                                                            <div class="widget-49-meeting-action">
-                                                                <button onClick={bookdocappo} style={{ fontSize: "20px", color: "Blue" }} class="btn btn-sm btn-flash-border-primary" value={doc.email}>Book</button>
+                                                            <div className="widget-49-meeting-action">
+                                                                <button onClick={bookdocappo} style={{ fontSize: "20px", color: "Blue" }} className="btn btn-sm btn-flash-border-primary" value={doc.email}>Book</button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -490,17 +490,17 @@ function Card_doc() {
                                         <>
                                             <div style={{ marginTop: "50px", borderStyle: "groove" }} >
 
-                                                <butoon class="btn btn-outline-danger" onClick={() => setdatepicker(false)}>X</butoon>
+                                                <butoon className="btn btn-outline-danger" onClick={() => setdatepicker(false)}>X</butoon>
 
-                                                <h3 class="text-black" style={{ color: "black", textAlign: "center" }}>Select date and time</h3>
-                                                <h6 class="text-black" style={{ color: "black", textAlign: "center" }}>Dr.{slottime[0].fullname}</h6>
-                                                <div class="row py-6">
-                                                    <div class="col">
+                                                <h3 className="text-black" style={{ color: "black", textAlign: "center" }}>Select date and time</h3>
+                                                <h6 className="text-black" style={{ color: "black", textAlign: "center" }}>Dr.{slottime[0].fullname}</h6>
+                                                <div className="row py-6">
+                                                    <div className="col">
                                                         <form>
-                                                            <div class="date" id="date1" data-target-input="nearest">
+                                                            <div className="date" id="date1" data-target-input="nearest">
 
                                                                 <form action="">
-                                                                    <input type="date" name="date" class="form-control bg-light border-0 " onChange={(e) => handleinput1(e)}
+                                                                    <input type="date" name="date" className="form-control bg-light border-0 " onChange={(e) => handleinput1(e)}
                                                                         min={sdate} style={{ height: "55px" }} />
 
                                                                 </form>
@@ -509,21 +509,21 @@ function Card_doc() {
 
                                                     </div>
 
-                                                    <div class="col" style={{ paddingRight: "20px" }}>
-                                                        <div class="row" >
-                                                            <div class="col-md-3  text-center"><button id="slot1" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot1' class="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot1time}</button></div>
-                                                            <div class="col-md-3 text-center"><button id="slot2" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot2' class="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot2time}</button></div>
-                                                            <div class="col-md-3 text-center"><button id="slot3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot3' class="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot3time}</button></div>
-                                                            <div class="col-md-3 text-center"><button id="slot4" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot4' class="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot4time}</button></div>
-                                                            <p id='hiddenatr' hidden class="text-center text-danger">Today appointment booking time is over </p>
+                                                    <div className="col" style={{ paddingRight: "20px" }}>
+                                                        <div className="row" >
+                                                            <div className="col-md-3  text-center"><button id="slot1" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot1' className="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot1time}</button></div>
+                                                            <div className="col-md-3 text-center"><button id="slot2" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot2' className="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot2time}</button></div>
+                                                            <div className="col-md-3 text-center"><button id="slot3" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot3' className="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot3time}</button></div>
+                                                            <div className="col-md-3 text-center"><button id="slot4" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={(e) => handleinput(e)} name='slot4' className="btn btn-dark py-3" type="submit" value="true">{slottime[0].slot4time}</button></div>
+                                                            <p id='hiddenatr' hidden className="text-center text-danger">Today appointment booking time is over </p>
                                                         </div>
 
                                                     </div>
 
 
                                                 </div>
-                                                {/* <div class="text-center">
-                                                <button class="btn btn-dark py-3" type="button" data-toggle="modal" data-target="#exampleModal">Make Appointment</button>
+                                                {/* <div className="text-center">
+                                                <button className="btn btn-dark py-3" type="button" data-toggle="modal" data-target="#exampleModal">Make Appointment</button>
                                             </div> */}
 
                                             </div>
@@ -531,26 +531,26 @@ function Card_doc() {
                                     ) : null
                                 }
                                 {/* <!-- Button trigger modal --> */}
-                                {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Launch demo modal
                             </button> */}
 
                                 {/* <!-- Modal --> */}
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Your Selection</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
+                                            <div className="modal-header">
+                                                <h5 className="modal-title" id="exampleModalLabel">Your Selection</h5>
+                                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body">
+                                            <div className="modal-body">
                                                 <p>DoctorName :{tempdetails.docname} </p>
                                                 <p>AppointmentDate : {slot.date}</p>
                                                 <p>AppointmentTime : {tempdetails.slot}</p>
                                             </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                                <button onClick={(e) => submit(e)} type="button" class="btn btn-dark " data-bs-dismiss="modal">Proceed Further</button>
+                                            <div className="modal-footer">
+                                                <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                <button onClick={(e) => submit(e)} type="button" className="btn btn-dark " data-bs-dismiss="modal">Proceed Further</button>
                                             </div>
                                         </div>
                                     </div>

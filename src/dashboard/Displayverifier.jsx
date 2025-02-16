@@ -42,27 +42,27 @@ function Displayverifier() {
 
     return (
         <div>
-            <div class="container-fluid py-4">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card my-4">
-                            < div class="container-fluid py-4" >
-                                <div class="row">
+            <div className="container-fluid py-4">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="card my-4">
+                            < div className="container-fluid py-4" >
+                                <div className="row">
 
-                                    <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                        <div class="card">
-                                            <div class="card-header p-3 pt-2">
-                                                <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                                                    <i class="material-icons opacity-10">person</i>
+                                    <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                                        <div className="card">
+                                            <div className="card-header p-3 pt-2">
+                                                <div className="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                                                    <i className="material-icons opacity-10">person</i>
                                                 </div>
-                                                <div class="text-end pt-1">
-                                                    <p class="text-sm mb-0 text-capitalize">Total Verifiers</p>
-                                                    <h4 class="mb-0">{verifierlist.length}</h4>
+                                                <div className="text-end pt-1">
+                                                    <p className="text-sm mb-0 text-capitalize">Total Verifiers</p>
+                                                    <h4 className="mb-0">{verifierlist.length}</h4>
                                                 </div>
                                             </div>
-                                            <hr class="dark horizontal my-0" />
-                                            <div class="card-footer p-3">
-                                                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
+                                            <hr className="dark horizontal my-0" />
+                                            <div className="card-footer p-3">
+                                                <p className="mb-0"><span className="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
                                             </div>
                                         </div>
                                     </div>
@@ -73,19 +73,19 @@ function Displayverifier() {
 
                             </div >
                             <br></br>
-                            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                                    <h6 class="text-white text-capitalize ps-3">Verifiers</h6>
+                            <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                    <h6 className="text-white text-capitalize ps-3">Verifiers</h6>
                                 </div>
                             </div>
-                            <div class="card-body px-0 pb-2">
-                                <div class="table-responsive p-0">
-                                    <table class="table align-items-center mb-0">
+                            <div className="card-body px-0 pb-2">
+                                <div className="table-responsive p-0">
+                                    <table className="table align-items-center mb-0">
                                         <thead>
                                             <tr>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Patient name</th>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
-                                                {/* <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Phonenumber</th> */}
+                                                <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Patient name</th>
+                                                <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
+                                                {/* <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Phonenumber</th> */}
 
                                             </tr>
                                         </thead>
@@ -96,34 +96,34 @@ function Displayverifier() {
                                                     <>
                                                         <tr >
                                                             <td>
-                                                                <div class="d-flex px-2 py-1">
+                                                                <div className="d-flex px-2 py-1">
                                                                     {/* <div>
-                                                                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1" />
+                                                                        <img src="../assets/img/team-2.jpg" className="avatar avatar-sm me-3 border-radius-lg" alt="user1" />
                                                                     </div> */}
-                                                                    <div class="d-flex flex-column justify-content-center">
-                                                                        <h6 class="mb-0 text-sm">{doc.name}</h6>
-                                                                        <p class="text-xs text-secondary mb-0">{doc.role}</p>
+                                                                    <div className="d-flex flex-column justify-content-center">
+                                                                        <h6 className="mb-0 text-sm">{doc.name}</h6>
+                                                                        <p className="text-xs text-secondary mb-0">{doc.role}</p>
                                                                     </div>
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <p class="text-xs font-weight-bold mb-0">{doc.email}</p>
+                                                                <p className="text-xs font-weight-bold mb-0">{doc.email}</p>
 
                                                             </td>
 
 
 
-                                                            {/* <td class="align-middle text-center text-sm">
+                                                            {/* <td className="align-middle text-center text-sm">
 
 
-                                                                <button onClick={Changedocstatus} class="btn" value={doc.email} style={{ backgroundColor: "lightgreen", borderRadius: "20px", color: "black" }} type="button" >✔</button>
+                                                                <button onClick={Changedocstatus} className="btn" value={doc.email} style={{ backgroundColor: "lightgreen", borderRadius: "20px", color: "black" }} type="button" >✔</button>
 
 
                                                             </td>
-                                                            <td class="align-middle text-center text-sm">
+                                                            <td className="align-middle text-center text-sm">
 
 
-                                                                <button onClick={Changedocstatus} class="btn" value={doc.email} style={{ backgroundColor: "red", borderRadius: "20px", color: "black" }} type="button" >✘</button>
+                                                                <button onClick={Changedocstatus} className="btn" value={doc.email} style={{ backgroundColor: "red", borderRadius: "20px", color: "black" }} type="button" >✘</button>
 
 
                                                             </td> */}

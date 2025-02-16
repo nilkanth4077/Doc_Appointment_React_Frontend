@@ -109,70 +109,70 @@ function DoctorDashboard() {
         <div>
             {loader ? (
                 <>
-                    {/* <div class="d-flex justify-content-center">
-                        <div class="spinner-border text-primary " role="status">
-                            <span class="sr-only"></span>
+                    {/* <div className="d-flex justify-content-center">
+                        <div className="spinner-border text-primary " role="status">
+                            <span className="sr-only"></span>
                         </div>
                     </div> */}
-                    <div class="d-flex align-items-center justify-content-center vh-100">
-                        <div class="text-center">
-                            <h1 class="display-1 fw-bold">401</h1>
-                            <p class="fs-3"> <span class="text-danger">Opps!</span> You have to login first</p>
-                            <p class="lead">
+                    <div className="d-flex align-items-center justify-content-center vh-100">
+                        <div className="text-center">
+                            <h1 className="display-1 fw-bold">401</h1>
+                            <p className="fs-3"> <span className="text-danger">Opps!</span> You have to login first</p>
+                            <p className="lead">
                                 Got ot login page
                             </p>
-                            <a href="/doclogin" class="btn btn-primary">Login</a>
+                            <a href="/doclogin" className="btn btn-primary">Login</a>
                         </div>
                     </div>
                 </>
             ) : (<>
                 <div>
-                    <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-dark" id="sidenav-main">
-                        <div class="sidenav-header">
+                    <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-dark" id="sidenav-main">
+                        <div className="sidenav-header">
                             <h4 style={{ color: "white", paddingTop: "20px", paddingLeft: "25px" }} >Doctor dashboard</h4>
                         </div>
-                        <hr class="horizontal light mt-0 mb-2" />
-                        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a onClick={(e) => fundetails(e)} class="nav-link text-white ">
-                                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                            {/* <i class="material-icons opacity-10">table_view</i> */}
+                        <hr className="horizontal light mt-0 mb-2" />
+                        <div className="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+                            <ul className="navbar-nav">
+                                <li className="nav-item">
+                                    <a onClick={(e) => fundetails(e)} className="nav-link text-white ">
+                                        <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                            {/* <i className="material-icons opacity-10">table_view</i> */}
                                         </div>
-                                        <span class="nav-link-text ms-1">My Details</span>
+                                        <span className="nav-link-text ms-1">My Details</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a onClick={(e) => funpendding(e)} class="nav-link text-white" >
-                                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                            {/* <i class="material-icons opacity-10">dashboard</i> */}
+                                <li className="nav-item">
+                                    <a onClick={(e) => funpendding(e)} className="nav-link text-white" >
+                                        <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                            {/* <i className="material-icons opacity-10">dashboard</i> */}
                                         </div>
-                                        <span class="nav-link-text ms-1">Pendding Appointment</span>
+                                        <span className="nav-link-text ms-1">Pendding Appointment</span>
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a onClick={(e) => funapproved(e)} class="nav-link text-white ">
-                                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                            {/* <i class="material-icons opacity-10">receipt_long</i> */}
+                                <li className="nav-item">
+                                    <a onClick={(e) => funapproved(e)} className="nav-link text-white ">
+                                        <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                            {/* <i className="material-icons opacity-10">receipt_long</i> */}
                                         </div>
-                                        <span class="nav-link-text ms-1">Approved Appointment</span>
+                                        <span className="nav-link-text ms-1">Approved Appointment</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a onClick={(e) => fundone(e)} class="nav-link text-white ">
-                                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                            {/* <i class="material-icons opacity-10">receipt_long</i> */}
+                                <li className="nav-item">
+                                    <a onClick={(e) => fundone(e)} className="nav-link text-white ">
+                                        <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                            {/* <i className="material-icons opacity-10">receipt_long</i> */}
                                         </div>
-                                        <span class="nav-link-text ms-1">Doned Appointment</span>
+                                        <span className="nav-link-text ms-1">Doned Appointment</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a onClick={logout} class="nav-link text-white ">
-                                        <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                                            <i class="material-icons opacity-10">login</i>
+                                <li className="nav-item">
+                                    <a onClick={logout} className="nav-link text-white ">
+                                        <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                                            <i className="material-icons opacity-10">login</i>
                                         </div>
-                                        <span class="nav-link-text ms-1">Logout</span>
+                                        <span className="nav-link-text ms-1">Logout</span>
                                     </a>
                                 </li>
 
@@ -180,9 +180,9 @@ function DoctorDashboard() {
                         </div>
 
                     </aside>
-                    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+                    <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
                         {/* <!-- Navbar --> */}
-                        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
+                        <nav className="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="true">
 
                         </nav >
                         {/* <!-- End Navbar --> */}

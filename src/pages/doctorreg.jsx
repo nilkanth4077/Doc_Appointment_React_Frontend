@@ -139,9 +139,9 @@ const Doctorreg = () => {
         {loader ? (
           <>
             <div style={bdloder}>
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border text-primary " role="status">
-                  <span class="sr-only"></span>
+              <div className="d-flex justify-content-center">
+                <div className="spinner-border text-primary " role="status">
+                  <span className="sr-only"></span>
                 </div>
                 <br></br>
                 <h4>Please Wait...</h4>
@@ -151,23 +151,23 @@ const Doctorreg = () => {
         ) : (<>
 
           <div style={bdcontent}>
-            <section class="home-banner">
+            <section className="home-banner">
 
-              <div class="container">
-                <div class="row">
-                  <div class=" col-4  d-flex align-items-center">
-                    <div class="banner_title" data-animation="fadeInLeft" animation-delay="2s" data-delay="0.3s">
+              <div className="container">
+                <div className="row">
+                  <div className=" col-4  d-flex align-items-center">
+                    <div className="banner_title" data-animation="fadeInLeft" animation-delay="2s" data-delay="0.3s">
                       <h1>Medicines cure diseases,<br /><span>But only Doctor can cure patient</span></h1>
-                      <p class="py-3">Establish your clinic virtually and grow it.
+                      <p className="py-3">Establish your clinic virtually and grow it.
                       </p>
                     </div>
                   </div>
-                  <div class="container col-6 mt-lg-5"  >
-                    <div class=" px-xl-5">
-                      <div class="lead_magnet_form_wrapper">
-                        <div class="form_title">
-                          <h4 class="sub_heading">Register Here :</h4>
-                          <h3 class="heading mb-2 pb-1">Fill details</h3>
+                  <div className="container col-6 mt-lg-5"  >
+                    <div className=" px-xl-5">
+                      <div className="lead_magnet_form_wrapper">
+                        <div className="form_title">
+                          <h4 className="sub_heading">Register Here :</h4>
+                          <h3 className="heading mb-2 pb-1">Fill details</h3>
                         </div>
                         <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css" />
 
@@ -175,31 +175,31 @@ const Doctorreg = () => {
                           <form >
                             <div id="mc_embed_signup_scroll">
 
-                              <div class="indicates-required"><span class="asterisk"></span> </div>
-                              <div class="mc-field-group form-group">
-                                <label for="mce-MMERGE1" class="mb-1 mt-3">Full Name </label>
-                                <input type="text" name="fullname" value={fullname} onChange={(e) => handleInput(e)} class="form-control" id="mce-MMERGE1" required="true" />
+                              <div className="indicates-required"><span className="asterisk"></span> </div>
+                              <div className="mc-field-group form-group">
+                                <label htmlFor="mce-MMERGE1" className="mb-1 mt-3">Full Name </label>
+                                <input type="text" name="fullname" value={fullname} onChange={(e) => handleInput(e)} className="form-control" id="mce-MMERGE1" required="true" />
                               </div>
-                              <div class="mc-field-group size1of2 form-group">
-                                <label for="mce-PHONE" class="mb-1 mt-3">Phone Number </label>
-                                <input type="text" name="phonenumber" value={phonenumber} onChange={(e) => handleInput(e)} class="form-control" id="mce-PHONE" required="true" />
+                              <div className="mc-field-group size1of2 form-group">
+                                <label htmlFor="mce-PHONE" className="mb-1 mt-3">Phone Number </label>
+                                <input type="text" name="phonenumber" value={phonenumber} onChange={(e) => handleInput(e)} className="form-control" id="mce-PHONE" required="true" />
                               </div>
-                              <div class="mc-field-group form-group">
-                                <label for="mce-EMAIL" class="mb-1 mt-3">Email Address *<span
-                                  class="asterisk"></span></label>
-                                <input type="email" name="email" value={email} onChange={(e) => handleInput(e)} class="email form-control"
+                              <div className="mc-field-group form-group">
+                                <label htmlFor="mce-EMAIL" className="mb-1 mt-3">Email Address *<span
+                                  className="asterisk"></span></label>
+                                <input type="email" name="email" value={email} onChange={(e) => handleInput(e)} className="email form-control"
                                   id="mce-EMAIL" required="true" />
                               </div>
-                              <div class="mc-field-group form-group">
-                                <label for="mce-EMAIL" class="mb-1 mt-3">Password *<span
-                                  class="asterisk"></span></label>
-                                <input type="password" name="password" value={password} onChange={(e) => handleInput(e)} class="email form-control"
+                              <div className="mc-field-group form-group">
+                                <label htmlFor="mce-EMAIL" className="mb-1 mt-3">Password *<span
+                                  className="asterisk"></span></label>
+                                <input type="password" name="password" value={password} onChange={(e) => handleInput(e)} className="email form-control"
                                   id="mce-EMAIL" required="true" />
                               </div>
 
-                              <div class="mc-field-group mb-5">
-                                <label for="mce-MMERGE2" class="mb-1 mt-3">Specialty </label>
-                                <select name="specialty" value={specialty} onChange={(e) => handleInput(e)} class="form-select form-control" id="mce-MMERGE2">
+                              <div className="mc-field-group mb-5">
+                                <label htmlFor="mce-MMERGE2" className="mb-1 mt-3">Specialty </label>
+                                <select name="specialty" value={specialty} onChange={(e) => handleInput(e)} className="form-select form-control" id="mce-MMERGE2">
                                   <option value="">Select Specialty</option>
                                   <option value="Gynecology">Gynecology</option>
                                   <option value="Dermatology">Dermatology</option>
@@ -220,36 +220,36 @@ const Doctorreg = () => {
                                   <option value="Radiologist">Radiologist</option>
                                 </select>
                               </div>
-                              <div class="mc-field-group form-group">
-                                <label for="mce-EMAIL" class="mb-1 mt-3">upload file<span
-                                  class="asterisk"></span></label>
-                                <input type="file" name="docfile" onChange={(e) => handleFile(e)} class="email form-control"
+                              <div className="mc-field-group form-group">
+                                <label htmlFor="mce-EMAIL" className="mb-1 mt-3">upload file<span
+                                  className="asterisk"></span></label>
+                                <input type="file" name="docfile" onChange={(e) => handleFile(e)} className="email form-control"
                                   id="mce-EMAIL" required="true" />
                               </div>
 
 
-                              <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style={{ display: NaN }}></div>
-                                <div class="response" id="mce-success-response" style={{ display: NaN }}></div>
+                              <div id="mce-responses" className="clear foot">
+                                <div className="response" id="mce-error-response" style={{ display: NaN }}></div>
+                                <div className="response" id="mce-success-response" style={{ display: NaN }}></div>
                               </div>
                               <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true"><input type="text" name="b_dd80eb08d9cc3b8010abc039f_34a0b4f4e9" tabindex="-1" value="" /></div>
-                              <div class="row">
-                                <div class=" col-3 optionalParent">
-                                  <div class="clear foot pt-4 ">
+                              <div className="row">
+                                <div className=" col-3 optionalParent">
+                                  <div className="clear foot pt-4 ">
                                     <input type="submit" onClick={submit}
                                       id="mc-embedded-subscribe"
-                                      class="button btn btn-success bt mt-5 get_demo_btn" />
+                                      className="button btn btn-success bt mt-5 get_demo_btn" />
 
                                   </div>
                                 </div>
-                                <div class=" col-3 optionalParent">
-                                  <div class="clear foot pt-4 pl-10 ">
-                                    <Link class="button btn btn-primary bt " style={{ textDecoration: "none" }} to="/">Home</Link>
+                                <div className=" col-3 optionalParent">
+                                  <div className="clear foot pt-4 pl-10 ">
+                                    <Link className="button btn btn-primary bt " style={{ textDecoration: "none" }} to="/">Home</Link>
                                   </div>
                                 </div>
-                                <div class=" col-5 optionalParent">
-                                  <div class="clear foot pt-4 pl-10 ">
-                                    <Link class="button btn btn-info bt " style={{ textDecoration: "none" }} to="/patientlogin">I'm Patient !!</Link>
+                                <div className=" col-5 optionalParent">
+                                  <div className="clear foot pt-4 pl-10 ">
+                                    <Link className="button btn btn-info bt " style={{ textDecoration: "none" }} to="/patientlogin">I'm Patient !!</Link>
                                   </div>
                                 </div>
                               </div>
