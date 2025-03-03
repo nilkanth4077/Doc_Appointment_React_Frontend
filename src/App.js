@@ -31,7 +31,7 @@ function App({ session }) {
     <>
 
       {/* <Component {...pageProps} /> */}
-      <p className='text-center'>New UI: "<a href="https://doc-appointment-new-frontend.vercel.app/"><u>https://doc-appointment-new-frontend.vercel.app/</u></a>"</p>
+      <h5 className='text-center p-0'>New UI: "<a href="https://doc-appointment-new-frontend.vercel.app/" target="_blank"><u>https://doc-appointment-new-frontend.vercel.app/</u></a>"</h5>
 
       <BrowserRouter>
         <Routes>
